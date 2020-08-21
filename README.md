@@ -84,7 +84,7 @@ We believe that this is due to effects at the South and North Poles.
 
 To try to deal with the nonlinearities, a random forest regressor was trained on the same data (**ML3.3.9**), and had slightly better predictive power (than the linear regressor) when tested on each of the four seasons and new data. The CO2ICE variable is included as well in the input data, so the predictor should consider the level of ice on the Martian surface under the specific point of upper infrared flux it is predicting. This slightly improved the predictions near the South Pole of the "Last Test Set", however they are still far from ideal. 
 
-The individual trees were analyzed to see which features are the most relevant.
+The individual trees were analyzed to see which features are the most relevant (this brief analysis is located near the beginning of the summer prediction section).
 
 Unfortunately, it appears that CO2ICE is the least relevant feature (if the 0-valued features of the exp(-pressure) terms are ignored), as shown in the compute_feature_importances() output in box 166. 
 The features used in the first few 20 node for each tree in the regressors are outputted in box 167, and there are some interesting things to notice. Primarily, the 0th feature (the surface temp term) is the most important, and there are some other features like the 23, 19, 20, 29th that appear pretty useful as well.
