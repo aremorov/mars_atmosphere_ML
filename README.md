@@ -88,7 +88,7 @@ The individual trees were analyzed to see which features are the most relevant (
 
 Unfortunately, it appears that CO2ICE is the least relevant feature (if the 0-valued features of the exp(-pressure) terms are ignored), as shown in the compute_feature_importances() output in box 166. 
 The features used in the first few 20 node for each tree in the regressors are outputted in box 167, and there are some interesting things to notice. Primarily, the 0th feature (the surface temp term) is the most important, and there are some other features like the 23, 19, 20, 29th that appear pretty useful as well.
-The total samples went through all of the nodes involving a certain feature was also calculated, shown in boxes 168 to 173. This is prone to overcounting, but essentially the more samples going through a node, the more important it is. These results agree with the compute_feature_importances() calculation.
+The total number of samples that went through all of the nodes involving a certain feature was also calculated, shown in boxes 168 to 173. This is prone to overcounting (the same sample can go through several nodes), but essentially the more samples going through a node, the more important it is. These results agree with the compute_feature_importances() calculation.
 
 Further work involving opacities and other features that relate to the upper infrared flux are required to create a better prediction algorithm.
 
