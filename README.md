@@ -82,7 +82,7 @@ We believe that this is due to effects at the South and North Poles.
 
 #### Random Forest Regressor
 
-To try to deal with the nonlinearities, a random forest regressor was trained on the same data [**ML3.3.9**](https://github.com/aremorov/mars_atmosphere_ML/blob/master/ML3.3.9.ipynb), and had slightly better predictive power (than the linear regressor) when tested on each of the four seasons and new data. The CO2ICE variable is included as well in the input data, so the predictor should consider the level of ice on the Martian surface under the specific point of upper infrared flux it is predicting. This slightly improved the predictions near the South Pole of the "Last Test Set", however they are still far from ideal. 
+To try to deal with the nonlinearities, a random forest regressor was trained on the same data in the notebook [**ML3.3.9**](https://github.com/aremorov/mars_atmosphere_ML/blob/master/ML3.3.9.ipynb), and had slightly better predictive power (than the linear regressor) when tested on each of the four seasons and new data. The CO2ICE variable is included as well in the input data, so the predictor should consider the level of ice on the Martian surface under the specific point of upper infrared flux it is predicting. This slightly improved the predictions near the South Pole of the "Last Test Set", however they are still far from ideal. 
 
 The individual trees were analyzed to see which features are the most relevant (this brief analysis is located near the beginning of the summer prediction section).
 
