@@ -4,7 +4,7 @@ Due to the large number of features and nonlinearities in the data, the algorith
 
 ## Bottom Solar Flux
 
-The first quantity that was supposed to be predicted was bottom solar flux. The final copy of the jupyter notebook for this algorithm is **ML3** (all of the ML2... notebooks were rough work to understand how to construct the predictor). 
+The first quantity that was supposed to be predicted was bottom solar flux. The final copy of the jupyter notebook for this algorithm is [**ML3**](https://github.com/aremorov/mars_atmosphere_ML/blob/master/ML3.ipynb) (all of the ML2... notebooks were rough work to understand how to construct the predictor). 
 
 The features used to predict the bottom solar flux (GSW) were temperature profile (obtained in box 3 of the notebook), dust opacity (TAU_OD, box 9), surface temperature (TSK, box 7), top solar flux (TOASW, box 11), and albedo (box 6, ALBEDO).
 The only contribution of albedo is that the bottom solar flux data contains a (1-albedo) factor, so the value that is actually being predicted in this notebook is bsf2 = bsf/(1-albedo), seen in box 15.
@@ -64,7 +64,7 @@ Unfortunately, there were still considerable errors, so Chris suggested adding i
 
 #### Results
 
-The linear regressor was trained on data from all four seasons, and the final version of the code is **ML3.3.8**. 
+The linear regressor was trained on data from all four seasons, and the final version of the code is [**ML3.3.8**](https://github.com/aremorov/mars_atmosphere_ML/blob/master/ML3.3.8.ipynb). 
 
 The af_summer, wf_summer files are auxhist11_d01_0002-00172_06\:00\:00, wrfout_d01_0002-00172_06\:00\:00.
 The af_winter, wf_winter files are auxhist11_d01_0002-00532_06\:00\:00, wrfout_d01_0002-00532_06\:00\:00.
@@ -82,7 +82,7 @@ We believe that this is due to effects at the South and North Poles.
 
 #### Random Forest Regressor
 
-To try to deal with the nonlinearities, a random forest regressor was trained on the same data (**ML3.3.9**), and had slightly better predictive power (than the linear regressor) when tested on each of the four seasons and new data. The CO2ICE variable is included as well in the input data, so the predictor should consider the level of ice on the Martian surface under the specific point of upper infrared flux it is predicting. This slightly improved the predictions near the South Pole of the "Last Test Set", however they are still far from ideal. 
+To try to deal with the nonlinearities, a random forest regressor was trained on the same data [**ML3.3.9**](https://github.com/aremorov/mars_atmosphere_ML/blob/master/ML3.3.9.ipynb), and had slightly better predictive power (than the linear regressor) when tested on each of the four seasons and new data. The CO2ICE variable is included as well in the input data, so the predictor should consider the level of ice on the Martian surface under the specific point of upper infrared flux it is predicting. This slightly improved the predictions near the South Pole of the "Last Test Set", however they are still far from ideal. 
 
 The individual trees were analyzed to see which features are the most relevant (this brief analysis is located near the beginning of the summer prediction section).
 
